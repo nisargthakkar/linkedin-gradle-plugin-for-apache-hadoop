@@ -1,5 +1,5 @@
 # This file generated from the Hadoop DSL. Do not edit by hand.
-type=VoldemortBuildandPush
+type=VenicePushJob
 dependencies=jobs1_job11RequiredPy
 avro.key.field=memberId
 avro.serializer.versioned=false

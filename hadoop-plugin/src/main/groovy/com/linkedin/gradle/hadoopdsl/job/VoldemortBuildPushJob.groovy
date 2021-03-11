@@ -19,15 +19,13 @@ import com.linkedin.gradle.hadoopdsl.HadoopDslMethod;
 import com.linkedin.gradle.hadoopdsl.NamedScope;
 
 /**
- * Job class for type=VoldemortBuildandPush jobs.
+ * Job class for type=VenicePushJob jobs. This job class is aimed at launching a job to push data to Venice.
  * <p>
  * These are documented internally at LinkedIn at https://iwww.corp.linkedin.com/wiki/cf/display/ENGS/Voldemort+Build+and+Push.
  * <p>
- * The code for this job is at https://github.com/voldemort/voldemort/blob/master/contrib/hadoop-store-builder/src/java/voldemort/store/readonly/mr/azkaban/VoldemortBuildAndPushJob.java.
- * <p>
  * In the example below, the values are NOT necessarily default values; they are simply meant to
  * illustrate the DSL. Please check that these values are appropriate for your application. In the
- * DSL, a VoldemortBuildandPush can be specified with:
+ * DSL, a VenicePushJob can be specified with:
  * <pre>
  *   voldemortBuildPushJob('jobName') {
  *     usesStoreName 'test-store'          // Required
@@ -93,7 +91,7 @@ class VoldemortBuildPushJob extends HadoopJavaJob {
    */
   VoldemortBuildPushJob(String jobName) {
     super(jobName);
-    setJobProperty("type", "VoldemortBuildandPush");
+    setJobProperty("type", "VenicePushJob");
   }
 
   /**
